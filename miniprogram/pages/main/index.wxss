@@ -1,0 +1,173 @@
+.MyContainer{
+  height: 100vh;
+}
+.UCenter-bg {
+  background-image: url('https://636c-cloud1-3ghxind9e5d846ae-1309001593.tcb.qcloud.la/7thDeath.png?sign=bfac199829d53eb0a4482f9c6d04c69a&t=1640680539');
+  background-size: cover;
+  /* filter: blur(5rpx); */
+  height: 550rpx;
+  display: flex;
+  justify-content: center;
+  padding-top: 40rpx;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-weight: 300;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+.img {
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 18rpx;
+}
+ 
+.index-contier {
+  color: #fff;
+  font-size: 12px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bgImage{
+  filter:blur(3rpx);
+  position:absolute;
+  height:100%;
+  width:100%;
+  z-index: -1;
+}
+.bgImage>image{
+  
+  height:100%;
+  width:100%;
+}
+ 
+.index-left {
+  float: left;
+  width: 30%;
+  text-align: center;
+  margin-top: 477rpx;
+  color: #000;
+}
+ 
+.index-center {
+  float: left;
+  width: 100%;
+  /* margin-top: 50rpx; */
+  padding: 15px;
+  color: #000;
+  display: flex;
+
+}
+ 
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+}
+ 
+.index-right {
+  float: left;
+  width: 30%;
+  text-align: center;
+  margin-top: 477rpx;
+  color: #000;
+}
+ 
+.index-right image {
+  height: 100%;
+  width: 100%;
+}
+ 
+.inform {
+  font-size: 30rpx;
+  width: 100%;
+}
+ 
+#userinfo1 {
+  width: 185rpx;
+  height: 185rpx;
+  /* margin:20rpx; */
+  border-radius: 50%;
+  display: flex;
+  overflow: hidden;
+  text-align: center;
+}
+ 
+#userinfo2 {
+  margin-left: 40rpx;
+  font-family: "微软雅黑";
+  font-size: 20px;
+  color:#fff;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+ 
+/* pages/leftSwiperDel/index.wxss */
+ 
+view {
+  box-sizing: border-box;
+}
+ 
+.item-box {
+  padding: 15rpx;
+  margin: 0 auto;
+}
+ 
+.items {
+  width: 100%;
+  padding: 15rpx;
+}
+ 
+.item {
+  opacity: 0.8;
+  position: relative;
+  border-top: 2rpx solid #eee;
+  height: 110rpx;
+  line-height: 120rpx;
+  overflow: hidden; 
+}
+ 
+.item:last-child {
+  border-bottom: 2rpx solid #eee;
+}
+ 
+.inner {
+  position: absolute;
+  top: 0;
+}
+ 
+.inner.txt {
+  background-color: #fff;
+  width: 100%;
+  z-index: 5;
+  padding: 0 20rpx;
+  transition: left 0.2s ease-in-out;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+ 
+.inner.del {
+  background-color: #e64340;
+  width: 180rpx;
+  text-align: center;
+  z-index: 4;
+  right: 0;
+  color: #fff;
+}
+ 
+.item-icon {
+  width: 60rpx;
+  height: 60rpx;
+  vertical-align: middle;
+  margin-right: 16rpx;
+  margin-left: 6px;
+  border-radius: 50%;
+}
+ 
+.item-data {
+  float:right;
+}

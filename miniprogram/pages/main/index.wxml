@@ -1,0 +1,174 @@
+<!--pages/main/index.wxml-->
+<view class="MyContainer bg-gray">
+  <view class="UCenter-bg bg-gray">
+      <view class="text-xl"><view class="logo">
+          <!-- <open-data type="userAvatarUrl" class="userinfo" id="userinfo1"></open-data> -->
+          <view wx:if="{{!logged}}" class="userinfo"id="userinfo1">
+            <image src="https://636c-cloud1-3ghxind9e5d846ae-1309001593.tcb.qcloud.la/user-unlogin.png?sign=f397d075150b8ef3eeff3a48293de051&t=1640835261" style="width: 250rpx; height: 200rpx;margin-left: 15rpx;"></image>
+          </view>
+          <view wx:else class="userinfo"id="userinfo1">
+            <open-data type="userAvatarUrl" class="userinfo" id="userinfo1"></open-data>
+          </view>
+        </view>
+      </view>
+      <view class="margin-top">
+        <view id="userinfo2">
+          <!-- <open-data type="userNickName" class="userinfo text-xxl radius shadow-lg text-blod"></open-data> -->
+          <view   wx:if="{{!logged}}" class="userinfo-nickname-wrapper">
+              <button disabled="{{disabled}}" class="userinfo-nickname" bindtap="getUserProfile">授权登录</button>
+          </view>
+          <view   wx:else class="userinfo-nickname-wrapper">
+            <open-data type="userNickName" class="userinfo text-xxl radius shadow-lg text-blod"></open-data>
+          </view>
+        </view>
+      </view>
+      <!-- <image src="https://raw.githubusercontent.com/weilanwl/ColorUI/master/demo/images/wave.gif" mode="scaleToFill" class="gif-wave"></image> -->
+  </view>
+  <view wx:if="{{!logged}}" class="container bg-gray">
+    <view class='inform'>
+      <view class="item-box">
+        <view class="items shadow-lg">
+          <view class="item">
+            <view class="inner txt">
+              <i> osu! 用户名</i>
+              <span class="item-data">
+                <i class="rankpace">None</i>
+              </span>
+            </view>
+          </view>
+          <view class="item">
+            <view class="inner txt">
+              <i> Ranked 谱面总分</i>
+              <span class="item-data">
+                <i class="rankpace">0</i>
+              </span>
+            </view>
+          </view>
+          <view class="item">
+            <view class="inner txt">
+              <i> 准确率</i>
+              <span class="item-data">
+                <i class="rankpace">0%</i>
+              </span>
+            </view>
+          </view>
+          <view class="item">
+            <view class="inner txt">
+              <i> 游戏次数</i>
+              <span class="item-data">
+                <i class="rankpace">0</i>
+              </span>
+            </view>
+          </view>
+          <view class="item">
+            <view class="inner txt">
+              <i> 总分</i>
+              <span class="item-data">
+                <i class="rankpace">0</i>
+              </span>
+            </view>
+          </view>
+          <view class="item">
+            <view class="inner txt">
+              <i> 总命中次数</i>
+              <span class="item-data">
+                <i class="rankpace">0</i>
+              </span>
+            </view>
+          </view>
+          <view class="item">
+            <view class="inner txt">
+              <i> 最大连击</i>
+              <span class="item-data">
+                <i class="rankpace">0</i>
+              </span>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:elif="{{!user[0]||!user[0].bind}}" class="container bg-gray">
+    <view>
+      <input type="text" bindinput="handleusername" style="outline-style: none ;border: 1px solid #ccc; border-radius: 3px;padding: 8px 8px;width: 300px; font-size: 16px;font-family: 'Microsoft soft'; margin-top:30%; height: 40px;" placeholder="请输入您的osu用户名"/>
+      <button type="primary" bindtap="bind_to_osu" style="margin-top: 100rpx;">绑定osu用户</button>
+    </view>
+  </view>
+  <view wx:else class="container bg-gray">
+    <view class='inform'>
+      <view class="item-box">
+        <view class="items shadow-lg">
+          <view class="item">
+            <view class="inner txt">
+              <i> osu! 用户名</i>
+              <span class="item-data">
+                <i class="rankpace">{{user[0].name}}</i>
+              </span>
+            </view>
+          </view>
+          <view class="item">
+            <view class="inner txt">
+              <i> 总分</i>
+              <span class="item-data">
+                <i class="rankpace">{{user[0].total_points}}</i>
+              </span>
+            </view>
+          </view>
+          <view class="item">
+            <view class="inner txt">
+              <i> Ranked 谱面总分</i>
+              <span class="item-data">
+                <i class="rankpace">{{user[0].ranked_total_points}}</i>
+              </span>
+            </view>
+          </view>
+          <view class="item">
+            <view class="inner txt">
+              <i> 准确率</i>
+              <span class="item-data">
+                <i class="rankpace">{{user[0].accuracy}}%</i>
+              </span>
+            </view>
+          </view>
+          <view class="item">
+            <view class="inner txt">
+              <i> 游戏次数</i>
+              <span class="item-data">
+                <i class="rankpace">{{user[0].play_times}}</i>
+              </span>
+            </view>
+          </view>
+          <view class="item">
+            <view class="inner txt">
+              <i> 等级</i>
+              <span class="item-data">
+                <i class="rankpace">{{user[0].level}}</i>
+              </span>
+            </view>
+          </view>
+          <view class="item">
+            <view class="inner txt">
+              <i> PP</i>
+              <span class="item-data">
+                <i class="rankpace">{{user[0].pp_raw}}</i>
+              </span>
+            </view>
+          </view>
+          <view class="item">
+            <view class="inner txt">
+              <i> 游戏时长</i>
+              <span class="item-data">
+                <i class="rankpace">{{user[0].play_length}}</i>
+              </span>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view>
+      <button type="primary" bindtap="refresh">更新信息</button>
+    </view>
+  </view>
+</view>
+
+
