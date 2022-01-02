@@ -1,2 +1,157 @@
 <!--pages/information/information.wxml-->
-<text>pages/information/information.wxml</text>
+<cu-custom bgColor="bg-gradual-pink" isCustom="{{true}}"><view slot="content">记录</view></cu-custom>
+<view class="main">
+  <view class="top">
+    <view class = "title">
+      <text class = "text-xl musictitle" style="color: #F5F5F5  ;">{{mapinfo.title}}</text>
+    </view>
+    <view class = "musicinfo">
+      <view class ="artist">
+        <text class="cuIcon-title text-red"></text>
+        <text class = "text-lg text-bold text-red artist1">Artist</text>
+        <text class = "artist2" style="color: #F5F5F5  ;">{{mapinfo.artist}}</text>
+      </view>
+      <view class ="mapper">
+        <text class="cuIcon-title text-yellow"></text>
+        <text class = "text-lg text-bold text-yellow mapper1">Mapper</text>
+        <text class = "mapper2" style="color: #F5F5F5  ;">{{mapinfo.creator}}</text>
+      </view>
+      <view class ="source">
+        <text class="cuIcon-title text-green"></text>
+        <text class = "text-lg text-bold text-cyan source1">Source</text>
+        <text class = "source2" style="color: #F5F5F5  ;">{{mapinfo.source}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="center">
+    <view class = "center-title">
+      <text class = "text-red light" style="font-size: 20px;">Stars:{{mapinfo.difficultyrating}}</text>
+    </view>
+    <view class="box">
+      <view class="left">
+        <view class="littlebox">
+          <image src="BPM.png"/>
+          <text class="text-orange light margin-left" style="font-size: 18px;">{{mapinfo.bpm}}</text>
+        </view>
+        <view class="littlebox">
+          <image src="AR.png"/>
+          <text class="text-orange light margin-left" style="font-size: 18px;">{{mapinfo.diff_approach}}</text>
+        </view>
+        <view class="littlebox">
+          <image src="CS.png"/>
+          <text class="text-orange light margin-left" style="font-size: 18px;">{{mapinfo.diff_size}}</text>
+        </view>
+      </view>
+      <view class="right">
+        <view class="littlebox">
+          <image src="Length.png"/>
+          <text class="text-orange light margin-left" style="font-size: 18px;">{{mapinfo.total_length}}s</text>
+        </view>
+        <view class="littlebox">
+          <image src="OD.png"/>
+          <text class="text-orange light margin-left" style="font-size: 18px;">{{mapinfo.diff_overall}}</text>
+        </view>
+        <view class="littlebox">
+          <image src="HP.png"/>
+          <text class="text-orange light margin-left" style="font-size: 18px;">{{mapinfo.diff_drain}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- <view class = "center-top">
+      <view class = "center-top-left">
+        
+      </view>
+      <view class = "center-top-right" style="margin-left: 25%;">
+        
+      </view>
+    </view>
+    <view class = "center-middle">
+      <view class = "center-middle-left">
+        
+      </view>
+      <view class = "center-middle-right" style="margin-left: 25%;">
+        
+      </view>
+    </view>
+    <view class = "center-buttom">
+      <view class = "center-buttom-left">
+        
+      </view>
+      <view class = "center-buttom-right" style="margin-left: 25%;">
+        
+      </view>
+    </view> -->
+  </view>
+  <view wx:if="{{played}}" class="buttom" style="text-align: center;">
+    <text class="text-xsl" style="color: #F5F5F5;">未游玩过当前谱面</text>
+  </view>
+  <view wx:else class="buttom">
+    <view class="userinfo">
+      <view class="Bimage">
+        <image src="{{userinfo.avatarUrl}}"></image>
+      </view>
+      <view class="profile">
+        <view class="username" style="display: flex; padding-bottom: 7px;">
+          <text class="text-xl" style="color: #F5F5F5  ;">{{userinfo.name}}</text>
+        </view>
+        <view class="playdate" style="display: flex;">
+          <text style="font-size: 15px; color: #F5F5F5  ;">{{playrecord.date}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="playdetail">
+      <view class="acc" style="text-align: center; padding-top: 10px;">
+        <view style="margin-top: 25px;">
+          <text class="text-red" style="font-size: 20px;">ACC</text>
+        </view>
+        <view> 
+          <text style="font-size: 25px; color: #F5F5F5;">{{accuracy}}%</text>
+        </view>
+      </view>
+      <view class="status">
+        <view class="score" style="text-align: center; text-align: center;">
+          <text class="text-xl" style="color: #F5F5F5;">{{playrecord.score}}</text>
+        </view>
+        <view class="hit">
+          <view class="hit1">
+            <view style="display: flex; flex-direction: column;">
+              <text class="text-blue text-xl">300x:</text>
+              <text style="font-size: 20px; color: #F5F5F5; padding-left: 2px;">{{playrecord.count300}}</text>
+            </view>
+            <view style="display: flex; flex-direction: column;">
+              <text class="text-green text-xl">100x:</text>
+              <text style="font-size: 20px; color: #F5F5F5;padding-left: 2px;">{{playrecord.count100}}</text>
+            </view>
+          </view>
+          <view class="rank" style="text-align: center;">
+            <text class="text-yellow text-xsl">{{playrecord.rank}}</text>
+          </view>
+          <view class="hit2">
+            <view style="display: flex; flex-direction: column;">
+              <text class="text-yellow text-xl">50x:</text>
+              <text style="font-size: 20px; color: #F5F5F5;padding-left: 2px;">{{playrecord.count50}}</text>
+            </view>
+            <view style="display: flex; flex-direction: column;">
+              <text class="text-red text-xl">0x:</text>
+              <text style="font-size: 20px; color: #F5F5F5;padding-left: 2px;">{{playrecord.countmiss}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="comboo" style="text-align: center; padding-top: 10px;">
+        <view style="margin-top: 25px;">
+          <text class="text-red" style="font-size: 20px;">Combo</text>
+        </view>
+        <view> 
+          <text style="font-size: 25px; color: #F5F5F5;">{{playrecord.maxcombo}}/{{mapinfo.max_combo}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="PP" style=" padding-top: 83px; text-align: center;">
+        <text class="text-lg text-red" style="font-family: '方正圆体'; font-size: 20px;">{{playrecord.pp}}PP</text>
+    </view>
+  </view>
+  <view wx:if="{{!played}}" style="text-align: center; padding-top: 15px;">
+    <button type="primary" bindtap="sharemyinfo" style="display:block; margin:0 auto; ">分享成绩</button>
+  </view>
+</view>

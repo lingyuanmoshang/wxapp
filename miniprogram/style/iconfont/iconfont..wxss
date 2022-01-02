@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3113062 */
+  src: url('//at.alicdn.com/t/font_3113062_miahd9lqmp.woff2?t=1640969954886') format('woff2'),
+       url('//at.alicdn.com/t/font_3113062_miahd9lqmp.woff?t=1640969954886') format('woff'),
+       url('//at.alicdn.com/t/font_3113062_miahd9lqmp.ttf?t=1640969954886') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 30px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-osuyouxi:before {
+  content: "\eb5c";
+}
+
+.icon-osushipin:before {
+  content: "\e68b";
+}
+
+.icon-osuhe_39shijuanguanli:before {
+  content: "\e711";
+}
+
+.icon-osuWikis-outlined:before {
+  content: "\e70a";
+}

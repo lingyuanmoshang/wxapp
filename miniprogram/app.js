@@ -38,6 +38,10 @@ App({
       }
     }),
     this.userInfo = {}
+    this.bind = false;
+    this.logged = false;
+    this.playrecord = {}
+    this.mapinfo = {};
   },
   globalData: {
     ColorList: [{

@@ -2,7 +2,6 @@
 <view class="MyContainer bg-gray">
   <view class="UCenter-bg bg-gray">
       <view class="text-xl"><view class="logo">
-          <!-- <open-data type="userAvatarUrl" class="userinfo" id="userinfo1"></open-data> -->
           <view wx:if="{{!logged}}" class="userinfo"id="userinfo1">
             <image src="https://636c-cloud1-3ghxind9e5d846ae-1309001593.tcb.qcloud.la/user-unlogin.png?sign=f397d075150b8ef3eeff3a48293de051&t=1640835261" style="width: 250rpx; height: 200rpx;margin-left: 15rpx;"></image>
           </view>
@@ -13,7 +12,6 @@
       </view>
       <view class="margin-top">
         <view id="userinfo2">
-          <!-- <open-data type="userNickName" class="userinfo text-xxl radius shadow-lg text-blod"></open-data> -->
           <view   wx:if="{{!logged}}" class="userinfo-nickname-wrapper">
               <button disabled="{{disabled}}" class="userinfo-nickname" bindtap="getUserProfile">授权登录</button>
           </view>
@@ -22,7 +20,6 @@
           </view>
         </view>
       </view>
-      <!-- <image src="https://raw.githubusercontent.com/weilanwl/ColorUI/master/demo/images/wave.gif" mode="scaleToFill" class="gif-wave"></image> -->
   </view>
   <view wx:if="{{!logged}}" class="container bg-gray">
     <view class='inform'>
@@ -165,8 +162,9 @@
         </view>
       </view>
     </view>
-    <view>
-      <button type="primary" bindtap="refresh">更新信息</button>
+    <view style="display: flex;">
+      <button type="primary" bindtap="unbind" style="margin:2px;">解除绑定</button>
+      <button type="primary" bindtap="updateinfo" style="margin:2px;">更新信息</button>
     </view>
   </view>
 </view>

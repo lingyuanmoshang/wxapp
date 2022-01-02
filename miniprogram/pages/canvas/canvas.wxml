@@ -1,0 +1,2 @@
+<!--pages/canvas/canvas.wxml-->
+<canvas canvas-id='canvas' style='width:{{windowW}}px;height:{{windowH}}px'></canvas>

@@ -1,1 +1,243 @@
 /* pages/information/information.wxss */
+.page {
+  height: 100Vh;
+  width: 100vw;
+}
+.main{
+  background-image: url("https://636c-cloud1-3ghxind9e5d846ae-1309001593.tcb.qcloud.la/94454794_p0.png?sign=3a1edd1aa72818db47a11ad8c5a3b969&t=1640917950");
+  background-size: cover;
+  height: 100Vh;
+  width: 100vw;
+  padding: 20rpx;
+}
+.top{
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  width: 100%;
+  height: 177px;
+  line-height: 2;
+  margin: auto;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, .1);
+  box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, .3);
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+}
+.musictitle{
+  font-family: "方正圆体";
+  font-size: 25px;
+}
+.artist{
+  height: 40px;
+  width:  100%;
+}
+.mapper{
+  height: 40px;
+  width:  100;
+}
+.source{
+  height: 40px;
+  width:  100;
+}
+.artist1{
+  font-family: "方正圆体";
+  font-size: 20px;
+  display: inline;
+  width: 200px;
+}
+.artist2{
+  font-family: "方正圆体";
+  font-size: 18px;
+  display: inline;
+  float: right;
+}
+.mapper1{
+  font-family: "方正圆体";
+  font-size: 20px;
+  display: inline;
+  width: 200px;
+}
+.mapper2{
+  font-family: "方正圆体";
+  font-size: 18px;
+  display: inline;
+  float: right;
+}
+.source1{
+  font-family: "方正圆体";
+  font-size: 20px;
+  display: inline;
+  width: 200px;
+}
+.source2{
+  font-family: "方正圆体";
+  font-size: 18px;
+  display: inline;
+  float: right;
+}
+.center{
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  width: 100%;
+  height: 190px;
+  line-height: 2;
+  margin: auto;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, .1);
+  box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, .3);
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+  margin-top: 10px;
+}
+.center-top{
+  height: 40px;
+  width:  100%;
+}
+.center-title{
+  text-align: center; 
+}
+.center-middle{
+  height: 40px;
+  width:  100%;
+}
+.center-buttom{
+  height: 40px;
+  width:  100%;
+}
+.center-top-left{
+  height: 100%;
+  width: 100px;
+  display: inline;
+}
+.center-top-right{
+  height: 100%;
+  width: 50%;
+  display: inline;
+}
+.center-middle-left{
+  height: 100%;
+  width: 100px;
+  display: inline;
+}
+.center-middle-right{
+  height: 100%;
+  width: 50%;
+  display: inline;
+}
+.center-buttom-left{
+  height: 100%;
+  width: 100px;
+  display: inline;
+}
+.center-buttom-right{
+  height: 100%;
+  width: 50%;
+  display: inline;
+}
+.box{
+  display: flex;
+  flex-direction: row;
+
+}
+.left{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+}
+.right{
+  display: flex;
+  flex-direction: column;
+}
+.littlebox{
+  display: flex;
+  align-items: center;
+  margin-bottom: 15rpx;
+}
+.buttom{
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  width: 100%;
+  height: 300px;
+  line-height: 2;
+  margin: auto;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, .1);
+  box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, .3);
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+  margin-top: 10px;
+}
+.userinfo{
+  height: 92px;
+  width:  100%;
+}
+.Bimage{
+  width: 185rpx;
+  height: 185rpx;
+  display: inline-block;
+}
+.Bimage image{
+  margin-top: 5px;
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+}
+.profile{
+  height: 100%;
+  display: inline-block;
+}
+.playdetail{
+  height: 92px;
+  width:  100%;
+  display: flex;
+}
+.acc{
+  width: 30%;
+}
+.status{
+  padding-left: 3%;
+  padding-right: 3%;
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+}
+.hit{
+  height: 70%;
+  width: 100%;
+  display: flex;
+}
+.score{
+  height: 30%;
+  width: 100%;
+}
+.hit1{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.hit2{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.rank{
+  height: 100%;
+  width: 40%;
+}
+.comboo{
+  width: 30%;
+}
+image{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+.myCanvas {
+  width: 320px;
+  height: 480px;
+  margin: 10px auto;
+  background: #fff;
+}
